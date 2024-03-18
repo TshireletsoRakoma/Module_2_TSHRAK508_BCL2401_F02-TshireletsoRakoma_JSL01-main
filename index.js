@@ -25,7 +25,7 @@ const addNewGoal = () => {
 
     // Check if the goal already exists using Array.some()
     const isDuplicate = Array.from(existingGoals).some(goal => {
-        return goal.textContent.trim() === goalInput.trim();
+        return goal.textContent.trim() === goalInput.toLowerCase();
     });
 
     // If a duplicate is found, display an alert and exit the function
